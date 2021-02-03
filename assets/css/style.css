@@ -4,6 +4,13 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+:root{
+  --primary-color: #fce138;
+  --secondary-color: #024e76;
+  --tertiary-color: #39a6b2;
+}
+
 body {
     font-family: Helvetica, Arial, sans-serif;
     color:  #39a6b2;
@@ -22,6 +29,8 @@ header {
   background-image: url(images/hero-bg.jpg);
   background-position: 80%;
   background-attachment: fixed;
+  z-index: 9999;
+ 
   
 
 }
@@ -144,7 +153,6 @@ footer a {
   position: absolute;
   left:-29px;
   top: -3px;
-  transform: rotate(-58deg);
   background-image: radial-gradient(circle, #39a6b2, #024e76);
 }
 
@@ -157,16 +165,18 @@ footer a {
   position: absolute;
   left: -26px;
   top: 1px;
+  transform: rotate(-59deg);
+  
 }
 
-.checkbox-wrapper input + label::after, .radio-wrapper input + label::after{
+.checkbox-wrapper input + label::after, 
+.radio-wrapper input + label::after {
   content: none;
 }
 
-.checkbox-wrapper input + label::after, .radio-wrapper input + label::after{
+.checkbox-wrapper input:checked + label::after, 
+.radio-wrapper input:checked + label::after {
   content: "";
-  font-weight: bold;
-  opacity: 1;
 }
 
 
